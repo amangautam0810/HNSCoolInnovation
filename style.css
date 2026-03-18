@@ -173,11 +173,11 @@ a:hover {
 
 .cta-button {
     display: inline-block;
-    padding: 12px 32px;
+    padding: 14px 36px;
     background-color: #0066cc;
     color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -188,7 +188,7 @@ a:hover {
 .cta-button:hover {
     background-color: #0052a3;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.35);
     text-decoration: none;
 }
 
@@ -196,6 +196,7 @@ a:hover {
     background-color: transparent;
     border: 2px solid #0066cc;
     color: #0066cc;
+    padding: 12px 34px;
 }
 
 .cta-button.secondary:hover {
@@ -209,7 +210,26 @@ a:hover {
 }
 
 .hero .cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-button.primary {
+    background-color: #ff6b6b;
+    color: #ffffff;
+}
+
+.cta-button.primary:hover {
+    background-color: #e85555;
+    box-shadow: 0 6px 16px rgba(255, 107, 107, 0.35);
+}
+
+/* Hero buttons container */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 /* ==================== */
@@ -263,8 +283,102 @@ main {
 }
 
 /* ==================== */
-/* 8b. SERVICES PREVIEW */
+/* 8b. TRUST SECTION    */
 /* ==================== */
+
+.trust-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.trust-section .container h2 {
+    text-align: center;
+    color: #0066cc;
+    margin-bottom: 3rem;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.trust-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.trust-card:hover {
+    border-color: #0066cc;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15);
+}
+
+.trust-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.trust-card h3 {
+    color: #0066cc;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.trust-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ==================== */
+/* 8c. STATS SECTION    */
+/* ==================== */
+
+.stats-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #f9f9f9 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #0066cc;
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.1);
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
 
 .services-preview {
     padding: 80px 20px;
@@ -504,6 +618,23 @@ main {
     padding: 60px 20px;
 }
 
+.contact-intro {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.contact-intro h2 {
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+}
+
+.contact-intro p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #666;
+}
+
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -622,11 +753,21 @@ main {
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    .hero-buttons {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
 
     .contact-wrapper {
@@ -644,6 +785,8 @@ main {
     .features,
     .services-content,
     .services-preview,
+    .stats-section,
+    .trust-section,
     .about-content,
     .contact-content {
         padding: 40px 20px;
@@ -651,6 +794,15 @@ main {
 
     .services-preview-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -718,5 +870,52 @@ main {
     .feature-card,
     .service-card {
         border: 2px solid #1a1a1a;
+    }
+}
+
+/* ==================== */
+/* 18. WHATSAPP BUTTON  */
+/* ==================== */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-button:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .whatsapp-button {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
     }
 }
