@@ -263,6 +263,72 @@ main {
 }
 
 /* ==================== */
+/* 8b. SERVICES PREVIEW */
+/* ==================== */
+
+.services-preview {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.services-preview .container h2 {
+    text-align: center;
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+}
+
+.section-intro {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem !important;
+}
+
+.services-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-preview-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.service-preview-card:hover {
+    border-color: #0066cc;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+}
+
+.service-preview-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-preview-card h3 {
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.service-preview-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.services-preview-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ==================== */
 /* 9. CTA SECTION       */
 /* ==================== */
 
@@ -577,9 +643,14 @@ main {
 
     .features,
     .services-content,
+    .services-preview,
     .about-content,
     .contact-content {
         padding: 40px 20px;
+    }
+
+    .services-preview-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
