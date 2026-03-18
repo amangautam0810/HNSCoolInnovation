@@ -534,7 +534,153 @@ main {
 }
 
 /* ==================== */
-/* 9. CTA SECTION       */
+/* 9. TESTIMONIALS      */
+/* ==================== */
+
+.testimonials-section {
+    padding: 100px 20px;
+    background-color: var(--secondary);
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 3.5rem;
+    font-weight: 800;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 4rem;
+    color: var(--accent);
+    opacity: 0.2;
+    line-height: 0.5;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.testimonial-quote {
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+    flex-grow: 1;
+    margin-top: 0.5rem;
+}
+
+.testimonial-author {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-company {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==================== */
+/* 9A. PROJECTS         */
+/* ==================== */
+
+.projects-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.projects-section h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin-bottom: 3.5rem !important;
+    font-weight: 500;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--secondary);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+    background-color: #ffffff;
+}
+
+.project-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.project-card h3 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* ==================== */
+/* 10. CTA SECTION      */
 /* ==================== */
 
 .cta-section {
@@ -1017,6 +1163,8 @@ main {
     .services-preview,
     .stats-section,
     .trust-section,
+    .testimonials-section,
+    .projects-section,
     .about-content,
     .contact-content,
     .cta-section {
@@ -1030,6 +1178,12 @@ main {
     .trust-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
+    }
+
+    .testimonials-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
     }
 
     .stats-grid {
@@ -1108,8 +1262,15 @@ main {
     .values-grid,
     .trust-grid,
     .stats-grid,
-    .services-preview-grid {
+    .services-preview-grid,
+    .testimonials-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .testimonial-card,
+    .project-card {
+        padding: 2rem;
     }
 
     .stat-card {
