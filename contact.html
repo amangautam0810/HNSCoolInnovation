@@ -215,9 +215,22 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/918442021927?text=Hello%20I%20am%20interested%20in%20your%20services" class="whatsapp-button" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp" onclick="gtag('event', 'whatsapp_click', {'event_category': 'contact', 'event_label': 'floating_whatsapp'});">
-        <span class="whatsapp-icon">💬</span>
-    </a>
+    <!-- WhatsApp Click Handler Script -->
+    <script>
+    function handleWhatsAppClick(e, label) {
+      e.preventDefault();
+
+      // Send event to Google Analytics
+      gtag('event', 'whatsapp_click', {
+        'event_category': 'contact',
+        'event_label': label
+      });
+
+      // Delay redirect slightly so event can fire
+      setTimeout(function () {
+        window.open('https://wa.me/918442021927?text=Hello%20I%20am%20interested%20in%20your%20services', '_blank');
+      }, 300);
+    }
+    </script>
 </body>
 </html>
