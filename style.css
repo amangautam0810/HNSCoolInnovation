@@ -881,42 +881,6 @@ main {
     line-height: 1.8;
 }
 
-/* Page Header with Maps Background */
-.page-header-with-map {
-    position: relative;
-    overflow: hidden;
-}
-
-.map-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.map-background iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.map-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 61, 98, 0.75);
-    z-index: 2;
-}
-
-.page-header-with-map .container {
-    position: relative;
-    z-index: 3;
-}
-
 /* ==================== */
 /* 11. ABOUT SECTION    */
 /* ==================== */
